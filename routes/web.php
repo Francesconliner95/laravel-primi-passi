@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data=[
+        'colors'=>[
+            'red',
+            'green',
+            'blue'
+        ],
+    ];
+    return view('home',$data);
 });
 
 Route::get('/test', function () {
